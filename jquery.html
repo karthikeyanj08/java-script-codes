@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <style>
+        #div-effect{
+            height: 100px;
+            width: 200px;
+            background-color: red;
+
+        }
+        #div-effect1{
+            height: 100px;
+            width: 200px;
+            background-color:blue; 
+        }
+        #div-effect2{
+            height: 100px;
+            width: 200px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>welcome to jquery!</h1>
+    <p id="p-tag">he Google Hosted Libraries is a stable, reliable, high-speed, globally available content distribution network for the most popular, open-source JavaScript libraries.
+        Google works directly with the key stakeholders for each library effort and accepts the latest versions as they are released.</p>
+        <p id="p2">
+            you can get complete tag
+        </p>
+        <input type="button" id='btn' value="click" >
+        <div id="div-effect">
+            div1
+        </div><br>
+        <div id="div-effect1">
+            div2
+        </div><br>
+        <div id="div-effect2">
+            div3
+        </div>
+        <script>
+            /*$(document).ready($('#btn').click(function(){ //click is an event
+               $('#p-tag').hide(); //hide is an effect
+            }))*/
+            /*$(document).ready($('#btn').click(function(){
+                $('#p2').toggle();
+            }))
+            $(document).ready(
+                $('#div-effect').fadeOut(3000)
+            )*/
+            $(document).ready(
+                $('#div-effect1').animate({width:'800px'},3000),
+                $('#div-effect').fadeOut(3000),
+                $('#div-effect2').animate({height:'500px'},3000),
+                $('#btn').click(function(){
+                    $('#p2').toggle();
+                }),
+                
+                
+            
+                $('h1').mouseenter(function(){ $('h1').hide()}),
+                $('#div-effect2').append('<p>HELLO</p>'),
+            //    $('#div-effect1').remove()
+            )
+    
+        </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+
+</head>
+<body>
+    <p>If you click on me, I will disappear.</p>
+    <p id="p1">if you double click on me i will diss appear</p>
+    <p id="p2">enter the paragraph</p>
+    <p id="p3"> this a paragraph</p>
+    <p id="p4">hello!</p>
+    <p id="p5">love<3</p>
+    <p id="p6">kkkkkkkkkkkkkkkkkkkkk</p>
+    <p id="p7">if u click on the hide button i wiil dissapper,i u click show i will visible to u</p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <p id="p8">this the content
+        that iam showing
+    </p>
+    <button id="btn">hide</button>
+    <script>
+
+$(document).ready(function(){
+  $("p").click(function(){
+   $(this).hide();
+});
+});
+$(document).ready(function(){
+  $("#p1").dblclick(function(){
+   $(this).hide();
+  });
+});
+$(document).ready(function(){
+  $("#p2").mouseenter(function(){
+    alert("You entered p1!");
+  });
+});
+$(document).ready(function(){
+  $("#p3").mouseleave(function(){
+    alert("Bye! You now leave p1!");
+  });
+});
+$(document).ready(function(){
+  $("#p4").mousedown(function(){
+    alert("Mouse down over p1!");
+  });
+});
+$(document).ready(function(){
+  $("#p5").hover(function(){
+    alert("You entered p1!");
+  },
+  function(){
+    alert("Bye! You now leave p1!");
+  }); 
+});
+$(document).ready(function(){
+  $("#p6").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+});
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#p7").hide();
+  });
+  $("#show").click(function(){
+    $("#p7").show();
+  });
+});
+$(document).ready(function(){
+  $("#btn").click(function(){
+    $("#p8").hide(1000);
+  });
+});
+
+    </script>
+
+</body>
+</html>
